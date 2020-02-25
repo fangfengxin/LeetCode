@@ -34,7 +34,7 @@ public class ListNode {
         ListNode temp = this.next;
         while (temp != null) {
             if(temp.next == null) {
-                result += temp.val;
+                result += temp.val + "->";
             } else {
                 result += temp.val + "->";
             }
