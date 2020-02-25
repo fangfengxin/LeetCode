@@ -1,0 +1,6 @@
+.idea/*.xml
+.idea/libraries/JUnit.xml
+*/*.iml
+out/
+# Default ignored files
+/workspace.xml
