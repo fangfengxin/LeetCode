@@ -18,20 +18,17 @@ public class ListNode {
     }
 
     public static ListNode addAll(int... nums) {
-        if (nums.length == 0) {
-            throw new IllegalArgumentException("Need list elements");
-        }
         ListNode list = new ListNode(0);
         for (int num : nums) {
             list.add(num);
         }
-        return list;
+        return list.next;
     }
 
     @Override
     public String toString() {
         String result = "";
-        ListNode temp = this.next;
+        ListNode temp = this;
         while (temp != null) {
             if (temp.next == null) {
                 result += temp.val;
