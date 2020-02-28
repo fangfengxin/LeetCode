@@ -1,4 +1,4 @@
-package problem_002_AddTwoNumbers.code;
+package problem_002_AddTwoNumbers;
 
 public class ListNode {
     int val;

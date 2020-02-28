@@ -1,9 +1,9 @@
-package problem_004_MedianOfTwoSortedArrays.test;
+package problem_004_MedianOfTwoSortedArrays;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import problem_004_MedianOfTwoSortedArrays.code.MedianOfTwoSortedArrays;
+import problem_004_MedianOfTwoSortedArrays.MedianOfTwoSortedArrays;
 
 public class MedianOfTwoSortedArraysTest {
     private MedianOfTwoSortedArrays solution;

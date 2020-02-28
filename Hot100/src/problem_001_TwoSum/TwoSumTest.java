@@ -1,10 +1,9 @@
-package problem_001_TwoSum.test;
+package problem_001_TwoSum;
 
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import problem_001_TwoSum.code.TwoSum;
+import problem_001_TwoSum.TwoSum;
 
 public class TwoSumTest {
 

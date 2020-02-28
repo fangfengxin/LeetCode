@@ -1,9 +1,9 @@
-package problem_003_LengthOfLongestSubstring.test;
+package problem_003_LengthOfLongestSubstring;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import problem_003_LengthOfLongestSubstring.code.LengthOfLongestSubstring;
+import problem_003_LengthOfLongestSubstring.LengthOfLongestSubstring;
 
 public class LengthOfLongestSubstringTest {
     private LengthOfLongestSubstring solution;

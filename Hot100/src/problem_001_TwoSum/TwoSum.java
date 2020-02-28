@@ -1,4 +1,4 @@
-package problem_001_TwoSum.code;
+package problem_001_TwoSum;
 
 import java.util.HashMap;
 
