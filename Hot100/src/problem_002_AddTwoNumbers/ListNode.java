@@ -33,8 +33,8 @@ public class ListNode {
         String result = "";
         ListNode temp = this.next;
         while (temp != null) {
-            if(temp.next == null) {
-                result += temp.val + "->";
+            if (temp.next == null) {
+                result += temp.val;
             } else {
                 result += temp.val + "->";
             }
@@ -44,6 +44,6 @@ public class ListNode {
     }
 
     public static void main(String[] args) {
-        System.out.println(ListNode.addAll(1, 2, 3).toString());
+        System.out.println(ListNode.addAll(1, 2, 3));
     }
 }
