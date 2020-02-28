@@ -1,4 +1,4 @@
-package problem_002_AddTwoNumbers;
+package problem_019_RemoveNthNodeFromEndOfList;
 
 public class ListNode {
     int val;
