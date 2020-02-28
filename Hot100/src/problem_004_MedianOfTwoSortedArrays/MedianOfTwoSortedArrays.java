@@ -15,10 +15,6 @@ package problem_004_MedianOfTwoSortedArrays;
  * nums2 = [3, 4]
  * 则中位数是 (2 + 3)/2 = 2.5
  */
-
-import java.nio.file.ClosedWatchServiceException;
-import java.util.IllformedLocaleException;
-
 public class MedianOfTwoSortedArrays {
     /*
      * 方法1：暴力破解

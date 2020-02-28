@@ -1,5 +1,8 @@
 package problem_003_LengthOfLongestSubstring;
 
+import java.util.HashMap;
+import java.util.HashSet;
+
 /*
  * 给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。
  *
@@ -20,13 +23,6 @@ package problem_003_LengthOfLongestSubstring;
  *
  * 请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
  */
-
-import org.jetbrains.annotations.NotNull;
-
-import java.awt.image.ImageProducer;
-import java.util.HashMap;
-import java.util.HashSet;
-
 public class LengthOfLongestSubstring {
     /*
      * 方法1：暴力破解

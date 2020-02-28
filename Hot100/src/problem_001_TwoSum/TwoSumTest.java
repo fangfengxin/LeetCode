@@ -3,7 +3,6 @@ package problem_001_TwoSum;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import problem_001_TwoSum.TwoSum;
 
 public class TwoSumTest {
 

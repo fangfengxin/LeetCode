@@ -3,7 +3,6 @@ package problem_005_LongestPalindromicSubstring;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import problem_005_LongestPalindromicSubstring.LongestPalindromicSubstring;
 
 public class LongestPalindromicSubstringTest {
     private LongestPalindromicSubstring solution;

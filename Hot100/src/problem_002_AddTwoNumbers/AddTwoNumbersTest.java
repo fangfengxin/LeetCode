@@ -3,8 +3,6 @@ package problem_002_AddTwoNumbers;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import problem_002_AddTwoNumbers.AddTwoNumbers;
-import problem_002_AddTwoNumbers.ListNode;
 
 public class AddTwoNumbersTest {
     private long startTime;

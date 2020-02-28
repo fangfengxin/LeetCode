@@ -12,11 +12,6 @@ package problem_005_LongestPalindromicSubstring;
  * 输入: "cbbd"
  * 输出: "bb"
  */
-
-import javafx.scene.effect.BlendMode;
-
-import java.util.Spliterator;
-
 public class LongestPalindromicSubstring {
     /*
      * 方法1：暴力破解
