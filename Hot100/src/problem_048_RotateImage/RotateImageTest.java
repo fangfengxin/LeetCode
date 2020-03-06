@@ -25,8 +25,14 @@ public class RotateImageTest {
     }
 
     @Test
-    public void testRotate() {
-        solution.rotate(matrix);
+    public void testRotate1() {
+        solution.rotate1(matrix);
+        Assert.assertArrayEquals(expected, matrix);
+    }
+
+    @Test
+    public void testRotate2() {
+        solution.rotate2(matrix);
         Assert.assertArrayEquals(expected, matrix);
     }
 }
