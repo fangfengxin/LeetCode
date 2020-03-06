@@ -1,7 +1,5 @@
 package problem_039_CombinationSum;
 
-import org.w3c.dom.html.HTMLParagraphElement;
-
 import java.util.*;
 
 /*
@@ -43,7 +41,6 @@ public class CombinationSum {
     }
 
     /**
-     * 回溯算法，找到每条满足要求的路径
      * @param candidates 无重复元素的数组
      * @param residue    剩余数值
      * @param path       存储路径上的数值
