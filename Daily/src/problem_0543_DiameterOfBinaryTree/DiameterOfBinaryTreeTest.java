@@ -18,7 +18,7 @@ public class DiameterOfBinaryTreeTest {
     }
 
     @Test
-    public void diameterOfBinaryTree() {
+    public void testDiameterOfBinaryTree() {
         int result = solution.diameterOfBinaryTree(root);
         assertEquals(expected, result);
     }
