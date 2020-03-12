@@ -20,7 +20,7 @@ public class GreatestCommonDivisorOfStringsTest {
     }
 
     @Test
-    public void gcdOfStrings() {
+    public void testGcdOfStrings() {
         String result = solution.gcdOfStrings(str1, str2);
         assertEquals(expected, result);
     }
