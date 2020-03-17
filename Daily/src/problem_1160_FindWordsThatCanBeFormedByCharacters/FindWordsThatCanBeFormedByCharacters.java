@@ -1,9 +1,6 @@
 package problem_1160_FindWordsThatCanBeFormedByCharacters;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
 
 /*
  * 1160. 拼写单词

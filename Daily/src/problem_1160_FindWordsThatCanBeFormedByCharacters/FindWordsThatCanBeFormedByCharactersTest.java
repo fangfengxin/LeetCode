@@ -20,7 +20,7 @@ public class FindWordsThatCanBeFormedByCharactersTest {
     }
 
     @Test
-    public void countCharacters() {
+    public void testCountCharacters() {
         int result = solution.countCharacters(words, chars);
         assertEquals(expected, result);
     }
