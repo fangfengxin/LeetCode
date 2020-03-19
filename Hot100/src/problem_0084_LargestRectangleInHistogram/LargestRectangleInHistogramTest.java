@@ -28,10 +28,10 @@ public class LargestRectangleInHistogramTest {
         int result = solution.largestRectangleArea2(heights);
         assertEquals(expected, result);
     }
+
     @Test
     public void largestRectangleArea3() {
         int result = solution.largestRectangleArea3(heights);
         assertEquals(expected, result);
     }
-
 }
