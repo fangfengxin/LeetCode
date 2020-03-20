@@ -35,7 +35,7 @@ public class KSmallestNumbersTest {
     @Test
     public void testGetLeastNumbers3() {
         int[] result = solution.getLeastNumbers3(arr, k);
-        Arrays.sort(result); // 因为是大根堆，所以排序，将数组变为升序，以保证比较正确
+        Arrays.sort(result); // 方法中使用大根堆，排序将数组变为升序以保证比较正确
         assertArrayEquals(expected, result);
     }
 

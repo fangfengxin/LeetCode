@@ -110,9 +110,9 @@ public class KSmallestNumbers {
         // 根据count数组从头找出k个数作为结果
         int[] res = new int[k];
         int number = 0;
-        for (int i = 0; i < count.length; i++) {
-            while (count[i]-- > 0 && number < k) {
-                res[number++] = i;
+        for (int num = 0; num < count.length; num++) {
+            while (count[num]-- > 0 && number < k) {
+                res[number++] = num;
             }
             if (number == k) {
                 break;
