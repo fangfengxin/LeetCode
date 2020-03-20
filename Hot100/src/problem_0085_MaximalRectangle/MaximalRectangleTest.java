@@ -23,8 +23,14 @@ public class MaximalRectangleTest {
     }
 
     @Test
-    public void maximalRectangle() {
-        int result = solution.maximalRectangle(matrix);
+    public void testMaximalRectangle1() {
+        int result = solution.maximalRectangle1(matrix);
         assertEquals(expected, result);
     }
+    @Test
+    public void testMaximalRectangle2() {
+        int result = solution.maximalRectangle2(matrix);
+        assertEquals(expected, result);
+    }
+
 }
