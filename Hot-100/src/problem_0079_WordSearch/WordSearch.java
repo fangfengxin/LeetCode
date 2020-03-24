@@ -48,7 +48,8 @@ public class WordSearch {
         if (next == word.length()) {
             return true;
         }
-        if (i < 0 || i >= board.length || j < 0 || j >= board[i].length || marked[i][j] || board[i][j] != word.charAt(next)) {
+        if (i < 0 || i >= board.length || j < 0 || j >= board[i].length
+                || marked[i][j] || board[i][j] != word.charAt(next)) {
             return false;
         }
         marked[i][j] = true;
