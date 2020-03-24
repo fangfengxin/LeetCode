@@ -1,4 +1,4 @@
-package problem_interview_17_16_TheMasseuseLcci;
+package problem_interview_17_16_TheMasseuse;
 
 /*
  * 面试题 17.16. 按摩师
@@ -22,7 +22,7 @@ package problem_interview_17_16_TheMasseuseLcci;
  * 输出： 12
  * 解释： 选择 1 号预约、 3 号预约、 5 号预约和 8 号预约，总时长 = 2 + 4 + 3 + 3 = 12。
  */
-public class TheMasseuseLcci {
+public class TheMasseuse {
     /*
      * 方法：动态规划
      * dp[i][0/1]表示第i+1个预约是否接受
