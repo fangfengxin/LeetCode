@@ -1,4 +1,4 @@
-package problem_interview_01_06_CompressStringLcci;
+package problem_interview_01_06_CompressString;
 
 /*
  * 面试题 01.06. 字符串压缩
@@ -19,7 +19,7 @@ package problem_interview_01_06_CompressStringLcci;
  * 提示：
  * 字符串长度在[0, 50000]范围内。
  */
-public class CompressStringLcci {
+public class CompressString {
     public String compressString(String S) {
         if (S == null || S.equals("")) return "";
         StringBuilder sb = new StringBuilder();
