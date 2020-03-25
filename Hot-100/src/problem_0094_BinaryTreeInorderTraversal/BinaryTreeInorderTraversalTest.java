@@ -2,10 +2,11 @@ package problem_0094_BinaryTreeInorderTraversal;
 
 import org.junit.Before;
 import org.junit.Test;
+import tools.TreeNode;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class BinaryTreeInorderTraversalTest {
     BinaryTreeInorderTraversal solution;
