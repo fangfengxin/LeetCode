@@ -21,14 +21,14 @@ public class BinaryTreeInorderTraversalTest {
     }
 
     @Test
-    public void testInorderTraversalRecursive() {
-        List<Integer> result = solution.inorderTraversalRecursive(root);
+    public void testInorderTraversal1() {
+        List<Integer> result = solution.inorderTraversal1(root);
         assertEquals(expected, result);
     }
 
     @Test
-    public void testInorderTraversalIterative() {
-        List<Integer> result = solution.inorderTraversalIterative(root);
+    public void testInorderTraversal2() {
+        List<Integer> result = solution.inorderTraversal2(root);
         assertEquals(expected, result);
     }
 }

@@ -24,7 +24,7 @@ public class BinaryTreeInorderTraversal {
     /*
      * 方法1：递归
      */
-    public List<Integer> inorderTraversalRecursive(TreeNode root) {
+    public List<Integer> inorderTraversal1(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         inorderTraversal(root, res);
         return res;
@@ -40,9 +40,9 @@ public class BinaryTreeInorderTraversal {
     }
 
     /*
-     * 方法2：迭代（栈）
+     * 方法2：栈
      */
-    public List<Integer> inorderTraversalIterative(TreeNode root) {
+    public List<Integer> inorderTraversal2(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
         TreeNode node = root;
