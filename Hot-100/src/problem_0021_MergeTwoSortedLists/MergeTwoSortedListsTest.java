@@ -3,7 +3,7 @@ package problem_0021_MergeTwoSortedLists;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import tools.ListNode;
+import utils.ListNode;
 
 public class MergeTwoSortedListsTest {
     private MergeTwoSortedLists solution;

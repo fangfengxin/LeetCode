@@ -1,6 +1,6 @@
 package problem_0023_MergeKSortedLists;
 
-import tools.ListNode;
+import utils.ListNode;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -2,7 +2,7 @@ package problem_0094_BinaryTreeInorderTraversal;
 
 import org.junit.Before;
 import org.junit.Test;
-import tools.TreeNode;
+import utils.TreeNode;
 
 import java.util.List;
 

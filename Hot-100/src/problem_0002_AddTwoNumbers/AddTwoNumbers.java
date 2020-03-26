@@ -1,6 +1,6 @@
 package problem_0002_AddTwoNumbers;
 
-import tools.ListNode;
+import utils.ListNode;
 
 /*
  * 给出两个非空的链表用来表示两个非负的整数。

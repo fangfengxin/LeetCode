@@ -1,6 +1,6 @@
 package problem_0021_MergeTwoSortedLists;
 
-import tools.ListNode;
+import utils.ListNode;
 
 /*
  * 将两个有序链表合并为一个新的有序链表并返回。
