@@ -2,6 +2,7 @@ package utils;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class TreeNode {
     public int val;
@@ -40,8 +41,24 @@ public class TreeNode {
         return head.left;
     }
 
+    /**
+     * 返回前序遍历字符串
+     */
     @Override
     public String toString() {
-        return Integer.toString(val);
+        StringBuilder sb = new StringBuilder();
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(this);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            if (node == null) {
+                continue;
+            }
+            sb.append(node.val);
+            sb.append(' ');
+            stack.push(node.right);
+            stack.push(node.left);
+        }
+        return sb.toString().strip();
     }
 }
