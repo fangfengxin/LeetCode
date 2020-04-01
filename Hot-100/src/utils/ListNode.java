@@ -36,15 +36,15 @@ public class ListNode {
     }
 
     /**
-     * 获取链表的第 index 个节点
+     * 获取链表的第 pos 个节点
      *
-     * @param index 从 0 开始
+     * @param pos 从 0 开始
      */
-    public ListNode get(int index) {
+    public ListNode get(int pos) {
         ListNode node = this;
-        while (index > 0) {
+        while (pos > 0) {
             node = node.next;
-            index--;
+            pos--;
         }
         return node;
     }
