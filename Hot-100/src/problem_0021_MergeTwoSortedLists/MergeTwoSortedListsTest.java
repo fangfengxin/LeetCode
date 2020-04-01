@@ -14,9 +14,9 @@ public class MergeTwoSortedListsTest {
     @Before
     public void init() {
         solution = new MergeTwoSortedLists();
-        l1 = ListNode.addAll(1, 2, 4);
-        l2 = ListNode.addAll(1, 3, 4);
-        expected = ListNode.addAll(1, 1, 2, 3, 4, 4);
+        l1 = ListNode.of(1, 2, 4);
+        l2 = ListNode.of(1, 3, 4);
+        expected = ListNode.of(1, 1, 2, 3, 4, 4);
     }
 
     @Test

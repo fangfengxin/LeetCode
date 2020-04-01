@@ -14,11 +14,11 @@ public class MergeKSortedListsTest {
     public void init() {
         solution = new MergeKSortedLists();
         lists = new ListNode[]{
-                ListNode.addAll(1, 4, 5),
-                ListNode.addAll(1, 3, 4),
-                ListNode.addAll(2, 6)
+                ListNode.of(1, 4, 5),
+                ListNode.of(1, 3, 4),
+                ListNode.of(2, 6)
         };
-        expected = ListNode.addAll(1, 1, 2, 3, 4, 4, 5, 6);
+        expected = ListNode.of(1, 1, 2, 3, 4, 4, 5, 6);
     }
 
     @Test

@@ -15,9 +15,9 @@ public class RemoveNthNodeFromEndOfListTest {
     @Before
     public void init() {
         solution = new RemoveNthNodeFromEndOfList();
-        head = ListNode.addAll(1, 2, 3, 4, 5);
+        head = ListNode.of(1, 2, 3, 4, 5);
         n = 2;
-        expected = ListNode.addAll(1, 2, 3, 5);
+        expected = ListNode.of(1, 2, 3, 5);
         /*head = ListNode.addAll(1);
         n = 1;
         expected = ListNode.addAll();*/

@@ -16,9 +16,9 @@ public class AddTwoNumbersTest {
     public void init() {
         startTime = System.currentTimeMillis();
         solution = new AddTwoNumbers();
-        l1 = ListNode.addAll(1, 4, 5);
-        l2 = ListNode.addAll(0, 7);
-        expected = ListNode.addAll(1, 1, 6).toString();
+        l1 = ListNode.of(1, 4, 5);
+        l2 = ListNode.of(0, 7);
+        expected = ListNode.of(1, 1, 6).toString();
     }
 
     @Test
