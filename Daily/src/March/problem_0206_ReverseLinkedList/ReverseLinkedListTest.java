@@ -13,8 +13,8 @@ public class ReverseLinkedListTest {
     @Before
     public void setUp() {
         solution = new ReverseLinkedList();
-        head = ListNode.addAll();
-        expected = ListNode.addAll();
+        head = ListNode.of();
+        expected = ListNode.of();
     }
 
     @Test

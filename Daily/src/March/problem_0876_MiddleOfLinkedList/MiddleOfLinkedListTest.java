@@ -13,8 +13,8 @@ public class MiddleOfLinkedListTest {
     @Before
     public void setUp() {
         solution = new MiddleOfLinkedList();
-        head = ListNode.addAll(1, 2, 3, 4, 5, 6);
-        expected = ListNode.addAll(4, 5, 6);
+        head = ListNode.of(1, 2, 3, 4, 5, 6);
+        expected = ListNode.of(4, 5, 6);
     }
 
     @Test
