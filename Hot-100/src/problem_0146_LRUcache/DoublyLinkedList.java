@@ -16,8 +16,6 @@ public class DoublyLinkedList {
 
     /**
      * 添加节点到双向链表头部
-     *
-     * @param node
      */
     public void add(DoublyLinkedListNode node) {
         node.pre = head;
@@ -28,8 +26,6 @@ public class DoublyLinkedList {
 
     /**
      * 将节点从双向链表中删除
-     *
-     * @param node
      */
     public void remove(DoublyLinkedListNode node) {
         node.next.pre = node.pre;
@@ -38,8 +34,6 @@ public class DoublyLinkedList {
 
     /**
      * 将节点移到双向链表头部
-     *
-     * @param node
      */
     public void moveToHead(DoublyLinkedListNode node) {
         remove(node);
