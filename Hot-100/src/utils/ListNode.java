@@ -54,6 +54,13 @@ public class ListNode {
      */
     @Override
     public String toString() {
-        return Integer.toString(val);
+        StringBuilder sb = new StringBuilder();
+        ListNode node = this;
+        while (node != null) {
+            sb.append(node.val);
+            sb.append(' ');
+            node = node.next;
+        }
+        return sb.toString().strip();
     }
 }
