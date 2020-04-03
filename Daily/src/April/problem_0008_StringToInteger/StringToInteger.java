@@ -1,5 +1,8 @@
 package April.problem_0008_StringToInteger;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /*
  * 8. 字符串转换整数 (atoi)
  * 请你来实现一个 atoi 函数，使其能将字符串转换成整数。
@@ -43,7 +46,10 @@ package April.problem_0008_StringToInteger;
  *      因此返回 INT_MIN (−2^31) 。
  */
 public class StringToInteger {
-    public int myAtoi(String str) {
+    /**
+     * 方法1：遍历字符串
+     */
+    public int myAtoi1(String str) {
         int n = str.length();
         char[] chars = str.toCharArray();
         int index = 0;
@@ -78,5 +84,23 @@ public class StringToInteger {
             index++;
         }
         return negative ? -num : num;
+    }
+
+    /**
+     * 方法2：正则表达式
+     */
+    public int myAtoi2(String str) {
+        Pattern pattern = Pattern.compile("[-+]??[0-9]++");
+        String strTrim = str.trim();
+        Matcher matcher = pattern.matcher(strTrim);
+        if (matcher.lookingAt()) {
+            String strNum = strTrim.substring(0, matcher.end());
+            try {
+                return Integer.parseInt(strNum);
+            } catch (NumberFormatException nfe) {
+                return strNum.charAt(0) == '-' ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+            }
+        }
+        return 0;
     }
 }

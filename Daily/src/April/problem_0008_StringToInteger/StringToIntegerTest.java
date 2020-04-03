@@ -13,13 +13,19 @@ public class StringToIntegerTest {
     @Before
     public void setUp() {
         solution = new StringToInteger();
-        str = "42";
-        expected = 42;
+        str = "      -11919730356x";
+        expected = -2147483648;
     }
 
     @Test
-    public void myAtoi() {
-        int result = solution.myAtoi(str);
+    public void testMyAtoi1() {
+        int result = solution.myAtoi1(str);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testMyAtoi2() {
+        int result = solution.myAtoi2(str);
         assertEquals(expected, result);
     }
 }
