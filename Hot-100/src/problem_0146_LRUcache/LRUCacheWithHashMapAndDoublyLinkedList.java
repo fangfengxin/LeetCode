@@ -49,7 +49,6 @@ public class LRUCacheWithHashMapAndDoublyLinkedList {
         list = new DoublyLinkedList();
     }
 
-
     /**
      * 获取数据
      *
