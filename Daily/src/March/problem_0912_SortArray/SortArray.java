@@ -361,7 +361,7 @@ public class SortArray {
             nums[i] = nums[0];
             nums[0] = tmp;
             // 堆的大小减一，将堆顶元素下沉
-            siftDown(nums, 0, i - 1);
+            shiftDown(nums, 0, i - 1);
         }
     }
 
@@ -373,7 +373,7 @@ public class SortArray {
     private void heapify(int[] nums) {
         // 将数组元素从底往上下沉
         for (int i = nums.length / 2 - 1; i >= 0; i--) {
-            siftDown(nums, i, nums.length - 1);
+            shiftDown(nums, i, nums.length - 1);
         }
     }
 
@@ -384,7 +384,7 @@ public class SortArray {
      * @param k    下沉元素的下标
      * @param end  当前堆的末尾
      */
-    private void siftDown(int[] nums, int k, int end) {
+    private void shiftDown(int[] nums, int k, int end) {
         while (2 * k + 1 <= end) {
             int j = 2 * k + 1;
             // 找到当前下沉元素的左右孩子节点中的较大元素
