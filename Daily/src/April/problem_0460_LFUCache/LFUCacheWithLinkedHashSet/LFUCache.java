@@ -31,6 +31,7 @@ import java.util.Map;
 
 /**
  * 使用 LinkedHashSet 实现 LFU
+ * 时间复杂度 O(1)
  */
 public class LFUCache {
     // 存储缓存的内容
