@@ -62,10 +62,10 @@ public class MaximalRectangle {
         }
         int[] heights = new int[matrix[0].length];
         int maxArea = 0;
-        for (int row = 0; row < matrix.length; row++) {
+        for (char[] chars : matrix) {
             // 在每行计算对应的heights数组
-            for (int col = 0; col < matrix[row].length; col++) {
-                if (matrix[row][col] == '1') {
+            for (int col = 0; col < chars.length; col++) {
+                if (chars[col] == '1') {
                     heights[col]++;
                 } else {
                     heights[col] = 0;
