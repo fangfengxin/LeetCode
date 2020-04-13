@@ -18,8 +18,14 @@ public class BestTimeToBuyAndSellStockWithCoolDownTest {
     }
 
     @Test
-    public void maxProfit() {
-        int result = solution.maxProfit(prices);
+    public void testMaxProfit1() {
+        int result = solution.maxProfit1(prices);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testMaxProfit2() {
+        int result = solution.maxProfit2(prices);
         assertEquals(expected, result);
     }
 }
