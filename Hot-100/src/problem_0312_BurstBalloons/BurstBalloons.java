@@ -133,7 +133,6 @@ public class BurstBalloons {
         n += 2;
         // 创建 dp 表
         int[][] dp = new int[n][n];
-        //
         for (int i = n - 2; i >= 0; i--) {
             for (int j = i + 2; j < n; j++) {
                 int maxCoins = 0;
