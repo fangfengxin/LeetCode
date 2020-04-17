@@ -1,6 +1,7 @@
 package problem_0055_JumpGame;
 
 /*
+ * 55. 跳跃游戏
  * 给定一个非负整数数组，你最初位于数组的第一个位置。
  * 数组中的每个元素代表你在该位置可以跳跃的最大长度。
  * 判断你是否能够到达最后一个位置。
@@ -15,8 +16,9 @@ package problem_0055_JumpGame;
  * 输出: false
  * 解释: 无论怎样，你总会到达索引为 3 的位置。但该位置的最大跳跃长度是 0 ， 所以你永远不可能到达最后一个位置。
  */
+
 public class JumpGame {
-    /*
+    /**
      * 方法1：原始递归回溯（时间超过限制）
      */
     public boolean canJump1(int[] nums) {
@@ -36,7 +38,7 @@ public class JumpGame {
         return false;
     }
 
-    /*
+    /**
      * 方法2：记忆化（是自顶向下的动态规划）
      * 如果某个坐标易已经确定不可能到达最后位置，则不需要重复计算。
      */
@@ -61,7 +63,7 @@ public class JumpGame {
         return false;
     }
 
-    /*
+    /**
      * 方法3：自底向上的动态规划
      * 消除回溯。
      */
@@ -80,7 +82,7 @@ public class JumpGame {
         return memo[0];
     }
 
-    /*
+    /**
      * 方法4：贪心
      * 记录当前找到的最左边的可以到达最后位置的坐标
      */
