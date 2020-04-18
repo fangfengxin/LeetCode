@@ -1,9 +1,5 @@
 package problem_0128_LongestConsecutiveSequence;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-
 /*
  * 128. 最长连续序列
  * 给定一个未排序的整数数组，找出最长连续序列的长度。
@@ -13,6 +9,14 @@ import java.util.HashSet;
  * 输入: [100, 4, 200, 1, 3, 2]
  * 输出: 4
  * 解释: 最长连续序列是 [1, 2, 3, 4]。它的长度为 4。
+ */
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+
+/**
+ * @author hustffx
  */
 public class LongestConsecutiveSequence {
     /**
@@ -36,7 +40,7 @@ public class LongestConsecutiveSequence {
     }
 
     /**
-     * 方法2：哈希表
+     * 方法2：哈希表 HashSet
      */
     public int longestConsecutive2(int[] nums) {
         HashSet<Integer> set = new HashSet<>();
@@ -60,7 +64,7 @@ public class LongestConsecutiveSequence {
     }
 
     /**
-     * 方法3：并查集
+     * 方法3：哈希表 HashMap
      * 存储以当前 key 为边界的连续序列的长度。
      */
     public int longestConsecutive3(int[] nums) {
