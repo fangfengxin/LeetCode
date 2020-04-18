@@ -75,6 +75,12 @@ public class NumberOfIslands {
         }
     }
 
+    /**
+     * 方法2：并查集
+     * 遍历二维网格，将竖直或水平相邻的陆地联结。
+     * 最终，返回并查集数据结构中相连部分的数量。
+     * 并查集详解：https://blog.csdn.net/qq_41593380/article/details/81146850
+     */
     public int numIslands2(char[][] grid) {
         if (grid.length == 0) {
             return 0;
@@ -105,10 +111,7 @@ public class NumberOfIslands {
     }
 
     /**
-     * 方法2：并查集
-     * 遍历二维网格，将竖直或水平相邻的陆地联结。
-     * 最终，返回并查集数据结构中相连部分的数量。
-     * 并查集详解：https://blog.csdn.net/qq_41593380/article/details/81146850
+     * 定义并查集类
      */
     static class UnionFind {
         private int count;
