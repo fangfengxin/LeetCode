@@ -10,8 +10,12 @@ package problem_0011_ContainerWithMostWater;
  * 输入: [1,8,6,2,5,4,8,3,7]
  * 输出: 49
  */
+
+/**
+ * @author hustffx
+ */
 public class ContainerWithMostWater {
-    /*
+    /**
      * 方法1：暴力破解
      * 遍历所有的情况，找到最大值。
      */
@@ -20,13 +24,13 @@ public class ContainerWithMostWater {
         for (int i = 0; i < height.length; i++) {
             for (int j = i + 1; j < height.length; j++) {
                 int area = Math.min(height[i], height[j]) * (j - i);
-                if (area > maxArea) maxArea = area;
+                maxArea = Math.max(maxArea, area);
             }
         }
         return maxArea;
     }
 
-    /*
+    /**
      * 方法2：双指针法
      * 两线段之间形成的区域总是会受到其中较短那条长度的限制。
      * 此外，两线段距离越远，得到的面积就越大。
@@ -35,10 +39,7 @@ public class ContainerWithMostWater {
         int maxArea = 0;
         int left = 0, right = height.length - 1;
         while (left < right) {
-            maxArea = Math.max(
-                    maxArea,
-                    Math.min(height[left], height[right]) * (right - left)
-            );
+            maxArea = Math.max(maxArea, Math.min(height[left], height[right]) * (right - left));
             if (height[left] < height[right]) {
                 left++;
             } else {
