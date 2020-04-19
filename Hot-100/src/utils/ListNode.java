@@ -1,5 +1,7 @@
 package utils;
 
+import java.util.Objects;
+
 /**
  * 单链表
  */
@@ -62,5 +64,23 @@ public class ListNode {
             node = node.next;
         }
         return sb.toString().strip();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        ListNode listNode = (ListNode) o;
+        return val == listNode.val &&
+                Objects.equals(next, listNode.next);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(val, next);
     }
 }
