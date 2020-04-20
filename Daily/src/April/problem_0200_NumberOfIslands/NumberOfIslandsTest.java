@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @Author hustffx
- * @Date 2020/4/20 11:54
+ * @Date 2020/4/20 11:55
  */
 class NumberOfIslandsTest {
     private NumberOfIslands solution;

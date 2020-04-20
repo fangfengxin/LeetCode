@@ -115,8 +115,8 @@ public class NumberOfIslands {
      * 扩展岛屿范围
      *
      * @param grid
-     * @param i
-     * @param j
+     * @param i 横坐标
+     * @param j 纵坐标
      */
     private void dfs(char[][] grid, int i, int j) {
         if (i < 0 || i >= grid.length || j < 0 || j >= grid[0].length) {
@@ -193,8 +193,8 @@ public class NumberOfIslands {
     /**
      * 合并两个连通集
      *
-     * @param index1
-     * @param index2
+     * @param index1 连通集元素1
+     * @param index2 连通集元素2
      */
     private void union(int index1, int index2) {
         int p1 = find(index1);
