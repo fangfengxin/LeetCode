@@ -27,7 +27,7 @@ import java.util.Arrays;
  */
 public class PartitionEqualSubsetSum {
     /**
-     * 方法1：动态规划
+     * 方法1：动态规划（参考 0-1 背包问题）
      * dp[i][j] 表示从数组的 [0, i] 这个子区间内挑选一些正整数，每个数只能用一次，使得这些数的和恰好等于 j。
      * dp[i][j] = dp[i - 1][j] || dp[i - 1][j - nums[i]]。
      * 注意到，只要 dp[i][target] 为真，后续所有的 dp[j][target] 都为真，可利用这个特性剪枝。
