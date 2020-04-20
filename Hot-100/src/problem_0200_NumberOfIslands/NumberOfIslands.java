@@ -1,8 +1,5 @@
 package problem_0200_NumberOfIslands;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 /*
  * 200. 岛屿数量
  * 给定一个由 '1'（陆地）和 '0'（水）组成的的二维网格，计算岛屿的数量。
@@ -25,10 +22,14 @@ import java.util.Queue;
  * 00011
  * 输出: 3
  */
-public class NumberOfIslands {
-    // 相邻位置遍历数组
-    private int[][] directions = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
 
+import java.util.LinkedList;
+import java.util.Queue;
+
+/**
+ * @author hustffx
+ */
+public class NumberOfIslands {
     /**
      * 方法1：广度优先搜索
      * 也可以使用回溯算法，原理类似
@@ -59,6 +60,8 @@ public class NumberOfIslands {
         grid[row][col] = '2';
         Queue<int[]> queue = new LinkedList<>();
         queue.offer(new int[]{row, col});
+        // 相邻位置遍历数组
+        int[][] directions = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
         while (!queue.isEmpty()) {
             int[] pos = queue.poll();
             for (int[] direction : directions) {

@@ -5,6 +5,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * @author hustffx
+ */
 public class NumberOfIslandsTest {
     private NumberOfIslands solution;
     private char[][] grid;
