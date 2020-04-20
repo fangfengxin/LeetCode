@@ -36,15 +36,6 @@ import java.util.Map;
  */
 public class EvaluateDivision {
     /**
-     * 存储当前节点的父节点
-     */
-    private final Map<String, String> parentMap = new HashMap<>();
-    /**
-     * 存储当前节点的父节点除以当前节点的商
-     */
-    private final Map<String, Double> valueMap = new HashMap<>();
-
-    /**
      * 方法1：并查集
      */
     public double[] calcEquation1(List<List<String>> equations, double[] values, List<List<String>> queries) {
@@ -78,6 +69,15 @@ public class EvaluateDivision {
         }
         return res;
     }
+
+    /**
+     * 存储当前节点的父节点
+     */
+    private final Map<String, String> parentMap = new HashMap<>();
+    /**
+     * 存储当前节点的父节点除以当前节点的商
+     */
+    private final Map<String, Double> valueMap = new HashMap<>();
 
     /**
      * 向并查集中添加节点
