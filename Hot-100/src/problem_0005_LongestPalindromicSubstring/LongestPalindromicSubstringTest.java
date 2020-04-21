@@ -4,6 +4,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * @Author hustffx
+ */
 public class LongestPalindromicSubstringTest {
     private LongestPalindromicSubstring solution;
     private String str;
