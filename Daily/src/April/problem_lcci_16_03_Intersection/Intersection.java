@@ -1,4 +1,4 @@
-package April.problem_interview_16_03_Intersection;
+package April.problem_lcci_16_03_Intersection;
 
 /*
  * 面试题 16.03. 交点
