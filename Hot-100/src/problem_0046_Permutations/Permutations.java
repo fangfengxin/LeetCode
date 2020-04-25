@@ -1,9 +1,5 @@
 package problem_0046_Permutations;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 /*
  * 给定一个没有重复数字的序列，返回其所有可能的全排列。
  *
@@ -19,8 +15,16 @@ import java.util.List;
  *   [3,2,1]
  * ]
  */
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+/**
+ * @author fengxin.fang
+ */
 public class Permutations {
-    /*
+    /**
      * 方法：回溯
      */
     public List<List<Integer>> permute(int[] nums) {
