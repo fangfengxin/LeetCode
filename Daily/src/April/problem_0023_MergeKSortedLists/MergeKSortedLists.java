@@ -25,7 +25,7 @@ import java.util.PriorityQueue;
  */
 public class MergeKSortedLists {
     /**
-     * 方法1：优先队列
+     * 方法1：逐一比较 + 优先队列
      */
     public ListNode mergeKLists1(ListNode[] lists) {
         PriorityQueue<ListNode> heap = new PriorityQueue<>(Comparator.comparingInt(o -> o.val));
