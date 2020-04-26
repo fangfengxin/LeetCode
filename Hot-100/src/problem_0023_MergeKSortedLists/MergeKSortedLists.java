@@ -1,11 +1,4 @@
 package problem_0023_MergeKSortedLists;
-
-import utils.ListNode;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.PriorityQueue;
-
 /*
  * 合并 k 个排序链表，返回合并后的排序链表。
  * 请分析和描述算法的复杂度。
@@ -19,8 +12,19 @@ import java.util.PriorityQueue;
  * ]
  * 输出: 1->1->2->3->4->4->5->6
  */
+
+import utils.ListNode;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
+/**
+ * @author hustffx
+ */
 public class MergeKSortedLists {
-    /*
+    /**
      * 方法1：暴力破解
      * 将所有节点加入链表，然后排序
      */
@@ -42,7 +46,7 @@ public class MergeKSortedLists {
         return result.next;
     }
 
-    /*
+    /**
      * 方法2：逐一比较k个链表的首元素
      */
     public ListNode mergeKLists2(ListNode[] lists) {
@@ -52,9 +56,12 @@ public class MergeKSortedLists {
     }
 
     private void mergeLists(ListNode head, ListNode[] lists) {
-        int min = Integer.MAX_VALUE; // 当前k个链表的首元素的最小值
-        int index = -1; // 要加入head的链表索引
-        int count = 0; // 记录已经遍历完的链表数目
+        // 当前k个链表的首元素的最小值
+        int min = Integer.MAX_VALUE;
+        // 要加入head的链表索引
+        int index = -1;
+        // 记录已经遍历完的链表数目
+        int count = 0;
 
         for (int i = 0; i < lists.length; i++) {
             if (lists[i] != null) {
@@ -76,31 +83,37 @@ public class MergeKSortedLists {
         mergeLists(head.next, lists);
     }
 
-    /*
+    /**
      * 方法3：用优先队列优化逐一比较的方法
      */
     public ListNode mergeKLists3(ListNode[] lists) {
-        PriorityQueue<ListNode> queue = new PriorityQueue<>((o1, o2) -> o1.val - o2.val);
+        PriorityQueue<ListNode> queue = new PriorityQueue<>(Comparator.comparingInt(o -> o.val));
         for (ListNode list : lists) {
-            if (list != null) queue.add(list);
+            if (list != null) {
+                queue.add(list);
+            }
         }
         ListNode head = new ListNode(0);
         ListNode node = head;
         while (!queue.isEmpty()) {
             node.next = queue.poll();
             node = node.next;
-            if (node.next != null) queue.add(node.next);
+            if (node.next != null) {
+                queue.add(node.next);
+            }
         }
         return head.next;
     }
 
-    /*
+    /**
      * 方法4：两两合并
      * 将数组的前一半与后一半两两合并，逐渐将数组减半
      */
     public ListNode mergeKLists4(ListNode[] lists) {
         int length = lists.length;
-        if (length == 0) return null;
+        if (length == 0) {
+            return null;
+        }
         while (length > 1) {
             for (int i = 0; i < length / 2; i++) {
                 lists[i] = mergeTwoLists(lists[i], lists[length - 1 - i]);
