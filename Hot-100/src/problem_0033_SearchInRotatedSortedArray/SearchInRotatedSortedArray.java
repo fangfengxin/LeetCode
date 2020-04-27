@@ -15,26 +15,35 @@ package problem_0033_SearchInRotatedSortedArray;
  * 输入: nums = [4,5,6,7,0,1,2], target = 3
  * 输出: -1
  */
+
+/**
+ * @author fengxin.fang
+ */
 public class SearchInRotatedSortedArray {
-    /*
+    /**
      * 方法：二分查找
      */
     public int search(int[] nums, int target) {
-        if (nums == null || nums.length == 0)
+        if (nums == null || nums.length == 0) {
             return -1;
+        }
         int low = 0, high = nums.length - 1, mid;
         while (low <= high) {
             mid = low + (high - low) / 2;
             if (nums[mid] == target) {
                 return mid;
             }
-            if (nums[low] <= nums[mid]) { // 前半数组有序
-                if (nums[low] <= target && target < nums[mid]) { // target在前半数组
+            // 前半数组有序
+            if (nums[low] <= nums[mid]) {
+                // target在前半数组
+                if (nums[low] <= target && target < nums[mid]) {
                     high = mid - 1;
                 } else {
                     low = mid + 1;
                 }
-            } else { // 后半数组有序
+            }
+            // 后半数组有序
+            else {
                 if (nums[mid] < target && target <= nums[high]) {
                     low = mid + 1;
                 } else {

@@ -1,11 +1,4 @@
 package problem_0104_MaximumDepthOfBinaryTree;
-
-import javafx.util.Pair;
-import utils.TreeNode;
-
-import java.util.LinkedList;
-import java.util.Queue;
-
 /*
  * 104. 二叉树的最大深度
  * 给定一个二叉树，找出其最大深度。
@@ -20,8 +13,18 @@ import java.util.Queue;
  *    15   7
  * 返回它的最大深度 3 。
  */
+
+import utils.TreeNode;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Queue;
+
+/**
+ * @author fengxin.fang
+ */
 public class MaximumDepthOfBinaryTree {
-    /*
+    /**
      * 方法1：递归
      */
     public int maxDepth(TreeNode root) {
@@ -31,25 +34,29 @@ public class MaximumDepthOfBinaryTree {
         return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
     }
 
-    /*
+    /**
      * 方法2：迭代
      * 深度优先，先序遍历，用栈
      * 广度优先，层次遍历，用队列
      */
     public int maxDepthIteration(TreeNode root) {
         int maxDepth = 0;
-        Queue<Pair<TreeNode, Integer>> queue = new LinkedList<>();
-        queue.offer(new Pair<>(root, 1));
+        Queue<TreeNode> queue = new LinkedList<>();
+        HashMap<TreeNode, Integer> map = new HashMap<>();
+        queue.offer(root);
+        map.put(root, 1);
         while (!queue.isEmpty()) {
-            Pair<TreeNode, Integer> pair = queue.poll();
-            TreeNode node = pair.getKey();
-            int curDepth = pair.getValue();
-            if (node == null) {
-                continue;
-            }
+            TreeNode node = queue.poll();
+            int curDepth = map.get(node);
             maxDepth = Math.max(maxDepth, curDepth);
-            queue.offer(new Pair<>(node.left, curDepth + 1));
-            queue.offer(new Pair<>(node.right, curDepth + 1));
+            if (node.left != null) {
+                queue.offer(node.left);
+                map.put(node.left, curDepth + 1);
+            }
+            if (node.right != null) {
+                queue.offer(node.right);
+                map.put(node.right, curDepth + 1);
+            }
         }
         return maxDepth;
     }
