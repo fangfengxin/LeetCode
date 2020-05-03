@@ -11,8 +11,12 @@ package problem_0053_MaximumSubArray;
  * 进阶:
  * 如果你已经实现复杂度为 O(n) 的解法，尝试使用更为精妙的分治法求解。
  */
+
+/**
+ * @author fengxin.fang
+ */
 public class MaximumSubArray {
-    /*
+    /**
      * 方法1：动态规划
      * 计算并保存到当前位置为止的最大和
      * 最后结果是这些当前最大和中的最大值
@@ -28,7 +32,7 @@ public class MaximumSubArray {
         return maxSum;
     }
 
-    /*
+    /**
      * 方法2：贪心算法
      * 减少动态规划数组的空间消耗。
      */
@@ -41,7 +45,7 @@ public class MaximumSubArray {
         return maxSum;
     }
 
-    /*
+    /**
      * 方法3：分治法
      * 最大和只可能来自于三部分：
      * 1.子区间 [left, mid]
