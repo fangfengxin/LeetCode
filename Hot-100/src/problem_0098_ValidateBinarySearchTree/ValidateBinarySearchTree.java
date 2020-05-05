@@ -1,11 +1,5 @@
 package problem_0098_ValidateBinarySearchTree;
 
-import utils.TreeNode;
-
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
-
 /*
  * 98. 验证二叉搜索树
  * 给定一个二叉树，判断其是否是一个有效的二叉搜索树。
@@ -32,13 +26,21 @@ import java.util.Stack;
  * 解释: 输入为: [5,1,null,null,4,3,6]。
  *      根节点的值为 5 ，但是其右子节点值为 4 。
  */
+
+import utils.TreeNode;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
+/**
+ * @author hustffx
+ */
 public class ValidateBinarySearchTree {
-    /*
-     * 方法1：前序 + 递归
+    /**
+     * 方法5：中序 + 递归
      */
-    public boolean isValidBST1(TreeNode root) {
-        return isValidBST(root, null, null);
-    }
+    long lastVal = Long.MIN_VALUE;
 
     private boolean isValidBST(TreeNode root, Integer lower, Integer upper) {
         /*if (root == null) {
@@ -65,7 +67,14 @@ public class ValidateBinarySearchTree {
                 && isValidBST(root.right, root.val, upper);
     }
 
-    /*
+    /**
+     * 方法1：前序 + 递归
+     */
+    public boolean isValidBST1(TreeNode root) {
+        return isValidBST(root, null, null);
+    }
+
+    /**
      * 方法2：前序 + 栈
      */
     public boolean isValidBST2(TreeNode root) {
@@ -109,7 +118,7 @@ public class ValidateBinarySearchTree {
         return true;
     }
 
-    /*
+    /**
      * 方法3：广度优先 + 队列
      */
     public boolean isValidBST3(TreeNode root) {
@@ -153,7 +162,7 @@ public class ValidateBinarySearchTree {
         return true;
     }
 
-    /*
+    /**
      * 方法4：中序 + 栈
      */
     public boolean isValidBST4(TreeNode root) {
@@ -174,11 +183,6 @@ public class ValidateBinarySearchTree {
         }
         return true;
     }
-
-    /*
-     * 方法5：中序 + 递归
-     */
-    long lastVal = Long.MIN_VALUE;
 
     public boolean isValidBST(TreeNode root) {
         /*if (root == null) {
