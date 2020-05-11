@@ -1,7 +1,5 @@
 package problem_0155_MinStack;
 
-import java.util.Stack;
-
 /*
  * 155. 最小栈
  * 设计一个支持 push，pop，top 操作，
@@ -21,6 +19,8 @@ import java.util.Stack;
  * minStack.top();      --> 返回 0.
  * minStack.getMin();   --> 返回 -2.
  */
+
+import java.util.Stack;
 
 /**
  * 存储与当前最小值的差值

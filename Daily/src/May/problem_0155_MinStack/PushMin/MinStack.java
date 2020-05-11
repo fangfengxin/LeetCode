@@ -1,39 +1,27 @@
-package problem_0155_MinStack;
+package May.problem_0155_MinStack.PushMin;
 
-/*
- * 155. 最小栈
- * 设计一个支持 push，pop，top 操作，
- * 并能在常数时间内检索到最小元素的栈。
- * push(x) -- 将元素 x 推入栈中。
- * pop() -- 删除栈顶的元素。
- * top() -- 获取栈顶元素。
- * getMin() -- 检索栈中的最小元素。
- *
- * 示例:
- * MinStack minStack = new MinStack();
- * minStack.push(-2);
- * minStack.push(0);
- * minStack.push(-3);
- * minStack.getMin();   --> 返回 -3.
- * minStack.pop();
- * minStack.top();      --> 返回 0.
- * minStack.getMin();   --> 返回 -2.
- */
-
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 /**
- * 将上一个最小值入栈后再更新最小值
+ * @Author hustffx
+ * @Date 2020/5/12 0:12
  */
-public class MinStackByPushingMin {
-    private Stack<Integer> stack;
+public class MinStack {
+    /**
+     * 数据栈，每次更新最小值之前将上一个最小值入栈。
+     */
+    private final Deque<Integer> stack;
+    /**
+     * 当前最小值
+     */
     private int min;
 
     /**
      * initialize your data structure here.
      */
-    public MinStackByPushingMin() {
-        stack = new Stack<>();
+    public MinStack() {
+        stack = new ArrayDeque<>();
         min = Integer.MAX_VALUE;
     }
 

@@ -2,7 +2,7 @@ package March.problem_0225_ImplementStackUsingQueues;
 
 import org.junit.Test;
 
-public class MyStackTest {
+public class MinStackTest {
 
     @Test
     public void test() {

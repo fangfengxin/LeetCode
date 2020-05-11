@@ -1,7 +1,5 @@
 package problem_0155_MinStack;
 
-import java.util.Stack;
-
 /*
  * 155. 最小栈
  * 设计一个支持 push，pop，top 操作，
@@ -22,14 +20,20 @@ import java.util.Stack;
  * minStack.getMin();   --> 返回 -2.
  */
 
+import java.util.Stack;
+
 /**
  * 使用辅助栈建立最小栈
  */
 public class MinStackWithAuxiliaryStack {
-    // 数据栈
-    Stack<Integer> stack;
-    // 辅助存储最小值的栈
-    Stack<Integer> minStack;
+    /**
+     * 数据栈
+     */
+    private final Stack<Integer> stack;
+    /**
+     * 辅助存储最小值的栈
+     */
+    private final Stack<Integer> minStack;
 
     /**
      * initialize your data structure here.
