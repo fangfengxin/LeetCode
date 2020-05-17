@@ -1,10 +1,5 @@
 package problem_0207_CourseSchedule;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-
 /*
  * 207. 课程表
  * 你这个学期必须选修 numCourse 门课程，记为 0 到 numCourse - 1 。
@@ -25,6 +20,15 @@ import java.util.Queue;
  *   1. 输入的先决条件是由 边缘列表 表示的图形，而不是 邻接矩阵 。详情请参见图的表示法。
  *   2. 你可以假定输入的先决条件中没有重复的边。
  *   3. 1 <= numCourses <= 10^5
+ */
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+/**
+ * @author hustffx
  */
 public class CourseSchedule {
     /**
@@ -83,7 +87,7 @@ public class CourseSchedule {
         int[] flags = new int[numCourses];
         // 依次深度优先搜索每个课程开始是否有环
         for (int i = 0; i < numCourses; i++) {
-            if (!dfs(adjacency, flags, i)) {
+            if (dfs(adjacency, flags, i)) {
                 return false;
             }
         }
@@ -91,28 +95,28 @@ public class CourseSchedule {
     }
 
     /**
-     * 深度优先搜索检测是否不存在环
+     * 深度优先搜索检测是否存在环
      */
     private boolean dfs(List<List<Integer>> adjacency, int[] flags, int i) {
         // 已被当前节点访问过，即存在环
         if (flags[i] == 1) {
-            return false;
+            return true;
         }
         // 已被其他节点访问过，说明后续无环，则判断无环
         if (flags[i] == -1) {
-            return true;
+            return false;
         }
         // 未曾被访问过
         // 标记为当前节点访问
         flags[i] = 1;
         for (Integer j : adjacency.get(i)) {
             // 邻接节点之后存在环
-            if (!dfs(adjacency, flags, j)) {
-                return false;
+            if (dfs(adjacency, flags, j)) {
+                return true;
             }
         }
         // 当前节点开始没有环
         flags[i] = -1;
-        return true;
+        return false;
     }
 }
