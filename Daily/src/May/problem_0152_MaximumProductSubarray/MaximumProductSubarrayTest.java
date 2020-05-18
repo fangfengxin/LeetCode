@@ -5,6 +5,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * @author hustffx
+ */
 public class MaximumProductSubarrayTest {
     MaximumProductSubarray solution;
     int[] nums;
