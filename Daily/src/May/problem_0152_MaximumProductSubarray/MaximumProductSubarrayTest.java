@@ -28,10 +28,4 @@ public class MaximumProductSubarrayTest {
         int result = solution.maxProduct2(nums);
         assertEquals(expected, result);
     }
-
-    @Test
-    public void testMaxProduct3() {
-        int result = solution.maxProduct3(nums);
-        assertEquals(expected, result);
-    }
 }
