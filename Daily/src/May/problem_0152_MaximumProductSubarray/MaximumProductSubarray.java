@@ -1,4 +1,4 @@
-package problem_0152_MaximumProductSubarray;
+package May.problem_0152_MaximumProductSubarray;
 
 /*
  * 152. 乘积最大子数组
@@ -21,65 +21,66 @@ package problem_0152_MaximumProductSubarray;
 public class MaximumProductSubarray {
     /**
      * 方法1：动态规划
+     * 数组元素有正有负，所以连续和的最大最小值会互相转换
      */
     public int maxProduct1(int[] nums) {
-        int[] dpMax = new int[nums.length];
-        dpMax[0] = nums[0];
-        int[] dpMin = new int[nums.length];
-        dpMin[0] = nums[0];
-        int maxProduct = nums[0];
-        for (int i = 1; i < nums.length; i++) {
-            dpMax[i] = Math.max(dpMax[i - 1] * nums[i], Math.max(dpMin[i - 1] * nums[i], nums[i]));
-            dpMin[i] = Math.min(dpMax[i - 1] * nums[i], Math.min(dpMin[i - 1] * nums[i], nums[i]));
-            maxProduct = Math.max(maxProduct, dpMax[i]);
-        }
-        return maxProduct;
-    }
+        int maxProduct = Integer.MIN_VALUE;
 
-    /**
-     * 方法2：降低空间复杂度的动态规划
-     */
-    public int maxProduct2(int[] nums) {
-        int maxProduct = nums[0];
+        // 存储当前元素结尾的最大最小连续积
         int curMax = 1;
         int curMin = 1;
+
         for (int num : nums) {
+            // 当前数组元素为负，将最大值和最小值进行交换
             if (num < 0) {
                 int tmp = curMax;
                 curMax = curMin;
                 curMin = tmp;
             }
+
+            // 计算以当前元素结尾的连续子数组乘积的最大值和最小值
             curMax = Math.max(curMax * num, num);
             curMin = Math.min(curMin * num, num);
+
+            // 更新结果最大值
             maxProduct = Math.max(maxProduct, curMax);
         }
+
         return maxProduct;
     }
 
     /**
-     * 方法3：正反遍历
+     * 方法2：正反遍历
      * 偶数个负数全部相乘。
      * 奇数个负数考虑偶数个负数的情况。
      * 在遇到 0 的时候，把 curMax 再初始化为 1 即可。
      */
-    public int maxProduct3(int[] nums) {
-        int maxProduct = nums[0];
+    public int maxProduct2(int[] nums) {
+        int maxProduct = Integer.MIN_VALUE;
+
+        // 记录当前最大连续和
         int curMax = 1;
+
         for (int num : nums) {
             curMax *= num;
             maxProduct = Math.max(maxProduct, curMax);
+
             if (num == 0) {
                 curMax = 1;
             }
         }
+
         curMax = 1;
+
         for (int i = nums.length - 1; i >= 0; i--) {
             curMax *= nums[i];
             maxProduct = Math.max(maxProduct, curMax);
+
             if (nums[i] == 0) {
                 curMax = 1;
             }
         }
+
         return maxProduct;
     }
 }
