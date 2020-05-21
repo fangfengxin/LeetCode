@@ -151,13 +151,7 @@ public class LongestPalindromicSubstring {
         String res = "";
         for (int i = length - 1; i >= 0; i--) {
             for (int j = i; j < length; j++) {
-                if (s.charAt(i) == s.charAt(j)) {
-                    if (i == j || i + 1 == j) {
-                        p[i][j] = true;
-                    } else {
-                        p[i][j] = p[i + 1][j - 1];
-                    }
-                }
+                p[i][j] = s.charAt(i) == s.charAt(j) && (j - i < 2 || p[i + 1][j - 1]);
                 if (p[i][j] && (j - i + 1) >= maxLen) {
                     maxLen = j - i + 1;
                     res = s.substring(i, j + 1);
@@ -180,15 +174,7 @@ public class LongestPalindromicSubstring {
         String res = "";
         for (int i = length - 1; i >= 0; i--) {
             for (int j = length - 1; j >= i; j--) {
-                if (s.charAt(i) == s.charAt(j)) {
-                    if (i == j || i + 1 == j) {
-                        p[j] = true;
-                    } else {
-                        p[j] = p[j - 1];
-                    }
-                } else {
-                    p[j] = false;
-                }
+                p[j] = s.charAt(i) == s.charAt(j) && (j - i < 2 || p[j - 1]);
                 if (p[j] && (j - i + 1) >= maxLen) {
                     maxLen = j - i + 1;
                     res = s.substring(i, j + 1);
@@ -207,7 +193,8 @@ public class LongestPalindromicSubstring {
             throw new NullPointerException();
         }
         String res = "";
-        int start = 0, end = 0;
+        int start = 0;
+        int end = 0;
         for (int i = 0; i < s.length(); i++) {
             int len1 = expandCenter(s, i, i);
             int len2 = expandCenter(s, i, i + 1);
