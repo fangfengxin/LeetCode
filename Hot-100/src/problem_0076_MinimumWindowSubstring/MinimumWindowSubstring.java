@@ -1,7 +1,5 @@
 package problem_0076_MinimumWindowSubstring;
 
-import java.util.HashMap;
-
 /*
  * 76. 最小覆盖子串
  * 给你一个字符串 S、一个字符串 T，请在字符串 S 里面找出：包含 T 所有字母的最小子串。
@@ -14,8 +12,14 @@ import java.util.HashMap;
  * 如果 S 中不存这样的子串，则返回空字符串 ""。
  * 如果 S 中存在这样的子串，我们保证它是唯一的答案。
  */
+
+import java.util.HashMap;
+
+/**
+ * @author hustffx
+ */
 public class MinimumWindowSubstring {
-    /*
+    /**
      * 方法：滑动窗口
      */
     public String minWindow(String s, String t) {
@@ -24,7 +28,8 @@ public class MinimumWindowSubstring {
             needs.put(c, needs.getOrDefault(c, 0) + 1);
         }
 
-        int left = 0, right = 0;
+        int left = 0;
+        int right = 0;
         int match = 0;
         int minLen = s.length() + 1;
         int minStart = -1;
