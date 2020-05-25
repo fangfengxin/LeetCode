@@ -30,12 +30,14 @@ import java.util.HashMap;
 
 /**
  * 使用哈希表和双向链表实现 LRU
+ *
+ * @author hustffx
  */
 public class LRUCacheWithHashMapAndDoublyLinkedList {
-    private int capacity;
+    private final int capacity;
     private int size;
-    private HashMap<Integer, DoublyLinkedListNode> cache;
-    private DoublyLinkedList list;
+    private final HashMap<Integer, DoublyLinkedListNode> cache;
+    private final DoublyLinkedList list;
 
     /**
      * 构造方法

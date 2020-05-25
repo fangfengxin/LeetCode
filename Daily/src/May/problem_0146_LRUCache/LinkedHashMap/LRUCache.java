@@ -1,4 +1,4 @@
-package problem_0146_LRUcache;
+package May.problem_0146_LRUCache.LinkedHashMap;
 
 /*
  * 146. LRU缓存机制
@@ -49,14 +49,14 @@ import java.util.Map;
  * 2. 可以选择 accessOrder 的值来确定是按插入顺序还是读取顺序排序。
  * 默认 false，代表按照插入顺序排序。
  *
- * @author hustffx
+ * @Author hustffx
+ * @Date 2020/5/25 21:20
  */
 public class LRUCache extends LinkedHashMap<Integer, Integer> {
-    private final int capacity;
+    private int capacity;
 
     public LRUCache(int capacity) {
-        // 将 LinkedHashMap 的 accessOrder 修改为 true，表示按照读取顺序排序
-        super(capacity, 0.75F, true);
+        super(capacity, 0.75f, true);
         this.capacity = capacity;
     }
 
@@ -68,9 +68,6 @@ public class LRUCache extends LinkedHashMap<Integer, Integer> {
         super.put(key, value);
     }
 
-    /**
-     * 默认情况下不删除久未使用的元素，需要重写判断条件
-     */
     @Override
     protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
         return size() > capacity;
