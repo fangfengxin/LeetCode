@@ -16,13 +16,16 @@ package problem_0287_FindDuplicateNumber;
  * 说明：
  * 1. 不能更改原数组（假设数组是只读的）。
  * 2. 只能使用额外的 O(1) 的空间。
- * 3. 时间复杂度小于 O(n2) 。
+ * 3. 时间复杂度小于 O(n^2) 。
  * 4. 数组中只有一个重复的数字，但它可能不止重复出现一次。
  */
 
 import java.util.Arrays;
 import java.util.HashSet;
 
+/**
+ * @author hustffx
+ */
 public class FindDuplicateNumber {
     /**
      * 方法1：排序
@@ -62,7 +65,7 @@ public class FindDuplicateNumber {
         int low = 1;
         int high = nums.length - 1;
         while (low < high) {
-            int mid = (low + high) >>> 1;
+            int mid = (low + high) >> 1;
             int count = 0;
             for (int num : nums) {
                 if (num <= mid) {

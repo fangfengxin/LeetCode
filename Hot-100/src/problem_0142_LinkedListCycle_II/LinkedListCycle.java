@@ -1,9 +1,5 @@
 package problem_0142_LinkedListCycle_II;
 
-import utils.ListNode;
-
-import java.util.HashSet;
-
 /*
  * 142. 环形链表 II
  * 给定一个链表，返回链表开始入环的第一个节点。如果链表无环，则返回 null。
@@ -28,6 +24,14 @@ import java.util.HashSet;
  *
  * 进阶：
  * 你是否可以不用额外空间解决此题？
+ */
+
+import utils.ListNode;
+
+import java.util.HashSet;
+
+/**
+ * @author hustffx
  */
 public class LinkedListCycle {
     /**
