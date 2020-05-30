@@ -1,7 +1,5 @@
 package problem_0084_LargestRectangleInHistogram;
 
-import java.util.Stack;
-
 /*
  * 84. 柱状图中最大的矩形
  * 给定 n 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。
@@ -11,8 +9,14 @@ import java.util.Stack;
  * 输入: [2,1,5,6,2,3]
  * 输出: 10
  */
+
+import java.util.Stack;
+
+/**
+ * @author fengxin.fang
+ */
 public class LargestRectangleInHistogram {
-    /*
+    /**
      * 方法1：暴力破解
      */
     public int largestRectangleArea1(int[] heights) {
@@ -27,7 +31,7 @@ public class LargestRectangleInHistogram {
         return maxArea;
     }
 
-    /*
+    /**
      * 方法2：分治
      * 最大面积矩形存在于以下几种情况：
      * 1.确定了最矮柱子以后，矩形的宽尽可能往两边延伸。
@@ -55,7 +59,7 @@ public class LargestRectangleInHistogram {
         );
     }
 
-    /*
+    /**
      * 方法3：栈
      */
     public int largestRectangleArea3(int[] heights) {
