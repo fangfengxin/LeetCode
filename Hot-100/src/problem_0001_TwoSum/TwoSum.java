@@ -1,7 +1,5 @@
 package problem_0001_TwoSum;
 
-import java.util.HashMap;
-
 /*
  * 给定一个整数数组 nums 和一个目标值 target，
  * 请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。
@@ -14,8 +12,14 @@ import java.util.HashMap;
  * 因为 nums[0] + nums[1] = 2 + 7 = 9
  * 所以返回 [0, 1]
  */
+
+import java.util.HashMap;
+
+/**
+ * @author hustffx
+ */
 public class TwoSum {
-    /*
+    /**
      * 方法1：暴力破解
      * 遍历每个元素 x ，并查找是否存在一个元素的值与 target - x 相等。
      */
@@ -30,7 +34,7 @@ public class TwoSum {
         throw new IllegalArgumentException("No two sum solution");
     }
 
-    /*
+    /**
      * 方法2：两遍哈希法
      * 首先遍历数组，将数组转换为元素和索引对应的键值对HashMap，
      * 再次遍历数组，使用HashMap的containsKey方法快速查找是否存在 target - x 这个键，
@@ -48,10 +52,10 @@ public class TwoSum {
                 return new int[]{i, j};
             }
         }
-        throw new IllegalArgumentException("Np two sum solution");
+        throw new IllegalArgumentException("No two sum solution");
     }
 
-    /*
+    /**
      * 方法3：一遍哈希法
      * 在一次遍历中，先确定HashMap中是否存在 target - x 这个键，
      * 不存在则将当前元素与索引加入HashMap，
