@@ -1,7 +1,5 @@
 package problem_0070_ClimbingStairs;
 
-import java.util.LinkedList;
-
 /*
  * 70. 爬楼梯
  * 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
@@ -23,8 +21,14 @@ import java.util.LinkedList;
  * 2. 1 阶 + 2 阶
  * 3. 2 阶 + 1 阶
  */
+
+import java.util.LinkedList;
+
+/**
+ * @author hustffx
+ */
 public class ClimbingStairs {
-    /*
+    /**
      * 方法1：动态规划
      */
     public int climbStairs1(int n) {
@@ -41,7 +45,7 @@ public class ClimbingStairs {
         return dp[n - 1];
     }
 
-    /*
+    /**
      * 方法2：斐波那契数
      */
     public int climbStairs2(int n) {
@@ -58,7 +62,7 @@ public class ClimbingStairs {
         return second;
     }
 
-    /*
+    /**
      * 方法3：优化动态规划
      */
     public int climbStairs3(int n) {
