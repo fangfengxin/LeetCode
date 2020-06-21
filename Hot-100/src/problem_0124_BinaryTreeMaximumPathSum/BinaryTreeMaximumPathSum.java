@@ -1,7 +1,5 @@
 package problem_0124_BinaryTreeMaximumPathSum;
 
-import utils.TreeNode;
-
 /*
  * 124. 二叉树中的最大路径和
  * 给定一个非空二叉树，返回其最大路径和。
@@ -27,6 +25,12 @@ import utils.TreeNode;
  *    15   7
  *
  * 输出: 42
+ */
+
+import utils.TreeNode;
+
+/**
+ * @author hustffx
  */
 public class BinaryTreeMaximumPathSum {
     /**
