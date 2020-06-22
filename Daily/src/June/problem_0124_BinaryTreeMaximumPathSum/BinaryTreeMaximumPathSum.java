@@ -1,4 +1,4 @@
-package June.probme_0124_BinaryTreeMaximumPathSum;
+package June.problem_0124_BinaryTreeMaximumPathSum;
 
 /*
  * 124. 二叉树中的最大路径和

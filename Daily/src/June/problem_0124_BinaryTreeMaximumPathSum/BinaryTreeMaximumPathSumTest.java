@@ -1,4 +1,4 @@
-package June.probme_0124_BinaryTreeMaximumPathSum;
+package June.problem_0124_BinaryTreeMaximumPathSum;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
