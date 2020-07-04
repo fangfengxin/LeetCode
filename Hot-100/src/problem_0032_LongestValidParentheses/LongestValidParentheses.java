@@ -1,7 +1,5 @@
 package problem_0032_LongestValidParentheses;
 
-import java.util.Stack;
-
 /*
  * 给定一个只包含 '(' 和 ')' 的字符串，找出最长的包含有效括号的子串的长度。
  *
@@ -15,8 +13,14 @@ import java.util.Stack;
  * 输出: 4
  * 解释: 最长有效括号子串为 "()()"
  */
+
+import java.util.Stack;
+
+/**
+ * @author hustffx
+ */
 public class LongestValidParentheses {
-    /*
+    /**
      * 方法1：暴力破解
      * 考虑给定字符串中每种可能的非空偶数长度子字符串，检查它是否是一个有效括号字符串序列
      */
@@ -46,7 +50,7 @@ public class LongestValidParentheses {
         return stack.isEmpty();
     }
 
-    /*
+    /**
      * 方法2：栈的应用
      * 用一个栈来存储坐标，在最开始的时候，将栈里面放入一个-1，方便计算
      */
@@ -55,13 +59,19 @@ public class LongestValidParentheses {
         Stack<Integer> stack = new Stack<>();
         stack.add(-1);
         for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == '(') { // 遇到'('将其坐标入栈
+            // 遇到'('将其坐标入栈
+            if (s.charAt(i) == '(') {
                 stack.push(i);
-            } else { // 遇到')'弹出栈顶元素
+            }
+            // 遇到')'弹出栈顶元素
+            else {
                 stack.pop();
-                if (!stack.empty()) { // 栈非空，又多一对匹配，需要更新max的值
+                // 栈非空，又多一对匹配，需要更新max的值
+                if (!stack.empty()) {
                     maxLen = Math.max(maxLen, i - stack.peek());
-                } else { // 栈空，表示前面已经正好匹配后又遇到')',只需将当期坐标入栈，作用与初始的-1相同
+                }
+                // 栈空，表示前面已经正好匹配后又遇到')',只需将当期坐标入栈，作用与初始的-1相同
+                else {
                     stack.push(i);
                 }
             }
@@ -69,7 +79,7 @@ public class LongestValidParentheses {
         return maxLen;
     }
 
-    /*
+    /**
      * 方法3：动态规划
      * 定义dp数组存储以当前字符结尾的最长有效字符串长度。
      * 显然，字符'('结尾的字符串不可能是有效字符串，长度必然为0。
